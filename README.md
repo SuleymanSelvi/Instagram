@@ -1,6 +1,6 @@
 > # *Projede kullanılan yazılım dilleri ve teknolojileri*
 ---
-* C#
+`* C#
 * .Net Core Web API
 * HTML
 * CSS
@@ -8,7 +8,7 @@
 * TYPESCRIPT
 * JQUERY
 * NODE.JS
-* SOCKET.IO
+* SOCKET.IO`
 
  > # *Projeden görüntüler*
 ---
