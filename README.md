@@ -10,6 +10,8 @@
 * jQuery
 * Node.js
 * Socket.IO
+* MSSQL
+* MongoDB
 
 <br>
 
