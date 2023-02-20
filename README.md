@@ -1,6 +1,7 @@
 # Projede kullanılan yazılım dilleri ve teknolojiler;
 ---
 * C#
+* .Net Core Web API
 * HTML
 * CSS
 * ANGULARJS
