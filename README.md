@@ -9,7 +9,7 @@
 * TypeScript
 * jQuery
 * Node.JS
-* SOCKET.IO
+* Socket.IO
 
 <br>
 
