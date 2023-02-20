@@ -8,7 +8,7 @@
 * AngularJS
 * TypeScript
 * jQuery
-* Node.JS
+* Node.js
 * Socket.IO
 
 <br>
