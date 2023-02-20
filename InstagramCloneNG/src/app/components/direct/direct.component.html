@@ -1,0 +1,246 @@
+<app-header></app-header>
+
+<!-- CHAT STYLE -->
+<style>
+    body {
+        margin-top: 20px;
+    }
+
+    .chat-online {
+        color: #34ce57
+    }
+
+    .chat-offline {
+        color: #e4606d
+    }
+
+    .chat-messages {
+        display: flex;
+        flex-direction: column;
+        max-height: 800px;
+        overflow-y: scroll
+    }
+
+    .chat-message-left,
+    .chat-message-right {
+        display: flex;
+        flex-shrink: 0
+    }
+
+    .chat-message-left {
+        margin-right: auto
+    }
+
+    .chat-message-right {
+        flex-direction: row-reverse;
+        margin-left: auto
+    }
+
+    .py-3 {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .px-4 {
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important;
+    }
+
+    .flex-grow-0 {
+        flex-grow: 0 !important;
+    }
+
+    .border-top {
+        border-top: 1px solid #dee2e6 !important;
+    }
+
+
+    /* FILE UPLOAD BUTTON */
+    label {
+        cursor: pointer;
+        background-color: #f0f0f0;
+        color: #ffffff;
+        padding: 10px 20px;
+    }
+
+    #upload {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+    }
+</style>
+
+<main class="content mt-5 content-body">
+    <div class="container p-0">
+        <div class="card" style="min-height: 850px">
+            <div class="row g-0">
+                <div class="col-12 col-lg-5 col-xl-3 border-right">
+
+                    <!-- SEARCH USER -->
+                    <div class="px-4 d-none d-md-block">
+                        <div class="align-items-center">
+                            <div class="flex-grow-1">
+                                <input (keyup)="searchUser(search.value)" style="border-radius: 20px;" type="search"
+                                    class="form-control my-3" placeholder="Ara..." #search>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- USER LIST -->
+                    <div *ngFor="let user of userList">
+                        <a class="list-group-item list-group-item-action border-0" (click)="selectUser(user.id)">
+                            <!-- [routerLink]="['/Direct']" [queryParams]="{ from: this.session.id, to: user.id }" -->
+
+                            <div class="badge bg-success float-right" style="color: black;"
+                                *ngIf="user.messageCount != 0">
+                                {{user.messageCount}}</div>
+                            <div class="d-flex align-items-start" style="cursor: pointer;">
+                                <img src="{{user.images}}" class="rounded-circle mr-1"
+                                    style="border:1px solid #000000;cursor: pointer;" width="45" height="45">
+                                <div class="flex-grow-1 ml-3">{{user.name}}
+                                    <div class="small" style="font-size: 13px;">
+                                        <!-- <div class="text-muted small"><em>{{user.isOnline ? '🟢 Çevrimiçi' : '🔴 Çevrimdışı'}}</em></div> -->
+                                        <!-- {{user.isWriting > 0 ? 'Yazıyor...' : user.lastMessage }} -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-7 col-xl-9" *ngIf="selectedUser != null">
+
+                    <!-- USER TEMPLATE -->
+                    <div class="py-2 px-4 border-bottom d-none d-lg-block">
+                        <div class="d-flex align-items-center py-1">
+                            <div class="position-relative">
+                                <img src="{{selectedUser.images}}" class="rounded-circle mr-1" width="40" height="40">
+                            </div>
+                            <div class="flex-grow-1 pl-3">
+                                <strong>{{selectedUser.name}}</strong>
+                                <div class="text-muted small"> <em>
+                                        {{selectedUser.isWriting > 0 ? 'Yazıyor...' : selectedUser.isOnline ?
+                                        'Çevrimiçi' : 'Çevrimdışı'}}
+                                    </em></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHAT -->
+                    <div class="position-relative" style="min-height: 700px">
+                        <div class="chat-messages p-4" *ngIf="selectedUserMessageList != null">
+
+                            <div *ngFor="let message of selectedUserMessageList.userMessageList">
+                                <div
+                                    [ngClass]="message.from == session.id ? 'chat-message-right mb-4': 'chat-message-left mb-4'">
+
+                                    <div>
+                                        <div class="text-muted small text-nowrap mt-2">{{message.createdDate}}</div>
+                                    </div>
+
+                                    <!-- IMAGE - VIDEO -->
+                                    <div class="flex-shrink-1 rounded">
+                                        <img *ngIf="message.message.endsWith('.jpg') && message.messageType != 'post'"
+                                            style='border: 1px solid #000000;' width="350" height='auto'
+                                            src="{{ message.message }}">
+
+                                        <video *ngIf="message.message.endsWith('.mp4')"
+                                            style="border: 1px solid #000000;" width="400" height="auto" controls>
+                                            <source src="{{ message.message }}" type="video/mp4">
+                                        </video>
+
+                                        <span class="px-2"
+                                            *ngIf="message.from == session.id && (message.message.endsWith('.mp4') || message.message.endsWith('.jpg'))"
+                                            [ngStyle]="selectedUser.isCheck ? {'color': 'rgb(0, 114, 255)'} : {'color': 'rgb(151, 151, 151)'}">
+                                            <i class="fa fa-check"></i>
+                                            <i style="margin-left: -7px;" class="fa fa-check"></i>
+                                        </span>
+                                    </div>
+
+                                    <!-- TEXT -->
+                                    <div *ngIf="!message.message.endsWith('.jpg') && !message.message.endsWith('.mp4')"
+                                        class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3"
+                                        style="display: flex; align-items: center">
+                                        {{message.message}}
+
+                                        <span class="nav-link px-2" *ngIf="message.from == session.id"
+                                            [ngStyle]="selectedUser.isCheck ? {'color': 'rgb(0, 114, 255)'} : {'color': 'rgb(151, 151, 151)'}">
+                                            <i class="fa fa-check"></i>
+                                            <i style="margin-left: -7px;" class="fa fa-check"></i>
+                                        </span>
+                                    </div>
+
+                                    <!-- POST MESSAGE -->
+                                    <div *ngIf="message.messageType=='post'" class="card"
+                                        style="border: 1px solid #e7e7e7; width: 50%;">
+                                        <div class="card-body" [routerLink]="['/PostDetail', message.postId]">
+                                            <div>
+                                                <div class='media media-reply'
+                                                    style="align-items: center; cursor: pointer;">
+                                                    <img class="mr-3 circle-rounded" style="border: 1px solid #000000"
+                                                        width="50px" height="50px" src="{{message.userImage}}">
+                                                    <div class="d-sm-flex justify-content-between mb-2"
+                                                        style="font-size: 15px">
+                                                        <h5>{{message.userName}}</h5>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <img class='click' src="{{ message.message }}"
+                                                        style='border: 1px solid #000000; margin-left: 20px; cursor: pointer;'
+                                                        width='95%' height='100%'>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div *ngIf="message.images.endsWith('.mp4')">
+                                                <video
+                                                    style="border: 1px solid #000000; margin-left: 20px; max-height: 1000px;"
+                                                    height="auto" width="730" controls>
+                                                    <source src="{{message.message}}" type="video/mp4">
+                                                </video>
+                                            </div> -->
+
+                                            <div style="margin-top:10px; margin-left:25px;">
+                                                <h5 style="font-family: revert; font-size: 18px;color: black;">
+                                                    {{message.userName}}&nbsp;
+                                                    <small>{{message.messageDescription}}</small>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PREVIEW FILE -->
+                    <div class="px-3" id="showUploadFile">
+                        <img *ngIf="fileType == 'image/jpeg'" style='border: 1px solid #000000;' width="150"
+                            height='auto' src="/src/assets/images/login.png" [attr.src]="imageUrl">
+
+                        <video *ngIf="fileType == 'video/mp4'" style="border: 1px solid #000000;" width="150"
+                            height="auto" controls autoplay [muted]="true" [attr.src]="imageUrl">
+                        </video>
+                    </div>
+
+                    <!-- SEND MESSAGE -->
+                    <div class="flex-grow-0 py-3 px-4 border-top">
+                        <div class="input-group">
+                            <input style="border-radius: 30px;" type="text" class="form-control" placeholder="Mesaj..."
+                                id="chatMessageDisable" #message (keyup)="writing(message.value, selectedUser.id)">
+
+                            <label style="border-radius: 30px; margin-left:10px" for="upload">
+                                <span><i style="color: black;" class="icon-paper-clip"></i></span>
+                            </label>
+                            <input type="file" id="upload" #image (change)="getFile($event)" />
+
+                            <button style="border-radius: 30px;margin-left:10px" class="btn"
+                                (click)="sendMessage(message.value); message.value = '' ">
+                                <span><i style="color: black;" class="fa fa-paper-plane-o"></i></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

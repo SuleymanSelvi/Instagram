@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="col-12 m-b-30">
+        <div class="card-body">
+            <h3 class="mb-4">Hesabımı Kalıcı Olarak Sil</h3>
+            <hr>
+            <p>Merhaba <b>{{isLogin.name}}</b>,</p>
+            <p>Hesabını silmek yerine dondurabilirsin. Bu, sen tekrar giriş yaparak hesabını yeniden etkinleştirene dek
+                hesabının gizli olacağı anlamına gelir.</p>
+            <p>Hesabını sadece haftada bir dondurabilirsin.</p>
+            <hr>
+            <p><i>Hesabını neden donduruyorsun?</i>
+                <select class="form-control">
+                    <option value="volvo">Seç</option>
+                    <option value="volvo">Gizlilikle ilgili endişeler</option>
+                    <option value="saab">Ara vermek istiyorum</option>
+                    <option value="mercedes">Çok zamanımı alıyor</option>
+                    <option value="audi">İkinci bir hesap açtım</option>
+                    <option value="audi">Başka bir şey</option>
+                </select>
+            </p>
+            <p><i>Devam etmek için lütfen şifreni tekrar gir</i>
+                <input type="password" maxlength="12" class="form-control" #password />
+            </p>
+            <hr>
+            <p>Aşağıdaki düğmeye bastığında, sen tekrar giriş yaparak hesabını yeniden etkinleştirene dek fotoğrafların,
+                yorumların ve beğenmelerin gizli olacaktır.</p>
+                
+            <div class="col-12 text-center">
+                <input type="button" value="Hesabı Sil" class="btn btn-danger px-5" (click)="openPopup()" />
+            </div>
+
+            <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Instagram</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Hesabınızı kalıcı olarak silmek istediğinizden emin misiniz?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-white" (click)="closePopup()">İptal</button>
+                            <button type="button" class="btn btn-danger"
+                                (click)="deleteAccount(password.value)">Sil</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

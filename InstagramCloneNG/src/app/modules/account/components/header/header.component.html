@@ -1,0 +1,72 @@
+<header style="background-color: white;border-bottom-style: inset;" class="p-2">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center">
+
+      <a href="/Home" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <img class="bi me-2" width="155" height="60" src="https://fontmeme.com/images/instagram-new-logo.png">
+      </a>
+
+      <div style="margin-left: 200px;" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input style="border-radius:15px" type="search" class="form-control" placeholder="Ara..." aria-label="Search"
+          #searchText (keypress)="searchOpen()" (keypress)="searchUser(searchText.value)">
+      </div>
+
+      <div class="dropdown text-end">
+        <div class="dropdown-menu text-small" style="display: block;width: 300px;" *ngIf="searchNone">
+          <div *ngFor="let user of userList">
+            <div class="slimScrollDiv card-body">
+              <div class="media border-bottom-1 pt-3 pb-3" [routerLink]="['/Profile', user.id]">
+                <img class="mr-3 rounded-circle" style="border:1px solid #000000;cursor: pointer;" width="45"
+                  height="45" src="{{ user.images }}">
+                <div class="media-body" style="cursor: pointer;" [routerLink]="['/Profile', user.id]">
+                  <h5>{{ user.name }}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="media-body text-center" style="font-size:16px;margin-top:15px">
+            <p [routerLink]="['/Users', searchText.value]" style="cursor: pointer;">Tüm Sonuçları Gör</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div>
+          <button [routerLink]="['/Users', searchText.value]" type="button" class="btn btn-rounded"><i
+              class="fa fa-search"></i></button>
+        </div> -->
+
+      <div style="margin-left:150px" class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <div class="card-profile" style="cursor:pointer;display: flex;">
+          <span [routerLink]="['/Home']" class="nav-link px-2 link-secondary">
+            <i class="icon-home"></i></span>
+          <span [routerLink]="['/Discover']" class="nav-link px-2 link-secondary">
+            <i class="icon-compass"></i></span>
+          <span [routerLink]="['/Liked', isLogin.id]" class="nav-link px-2 link-secondary">
+            <i class="icon-heart"></i></span>
+        </div>
+      </div>
+
+      <div class="dropdown text-end">
+        <a class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+          aria-expanded="false" (click)="divOpen()">
+          <img style="border: 1px solid black;cursor: pointer;" src="{{isLogin.image}}" width="40" height="40"
+            class="rounded-circle" [routerLink]="['/Profile', isLogin.id]">
+        </a>
+        <ul class="dropdown-menu text-small" style="display: block;" *ngIf="divNone">
+          <li> <a class="dropdown-item" [routerLink]="['/Liked', isLogin.id]">
+              <span class="mb-1 text-primary"><i class="icon-heart"></i></span>
+              &nbsp;Beğenmeler</a></li>
+          <li><a class="dropdown-item" [routerLink]="['/Saved', isLogin.id]">
+              <span class="mb-1 text-primary"><i class="fa fa-bookmark-o"></i></span>
+              &nbsp;Kaydedilenler</a></li>
+          <li><a class="dropdown-item" [routerLink]="['/Account']">
+              <span class="mb-1 text-primary"><i class="icon-settings"></i></span>
+              &nbsp;Ayarlar</a></li>
+          <hr class="dropdown-divider">
+          <li><a class="dropdown-item" style="cursor: pointer;" (click)="logOut()">Çıkış Yap</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</header>

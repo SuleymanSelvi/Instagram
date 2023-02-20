@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<div class="content-body">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card" style="margin-top:25px">
+                <div class="form-group" style="margin-top:30px;margin-left: 30px;">
+                    <input style="border-radius: 15px;" type="text" placeholder="Ara..." class="form-control"
+                        (keyup)="searchUser(searchText.value)" #searchText>
+                </div>
+                <div class="card-body">
+                    <div class="slimScrollDiv" *ngFor="let users of userList">
+                        <div class="media border-bottom-1 pt-3 pb-3" style="cursor: pointer;"
+                            [routerLink]="['/Profile', users.id]">
+                            <img class="mr-3 rounded-circle" style="border:1px solid #000000" width="65" height="65"
+                                src="{{users.images}}">
+                            <div class="media-body" style="cursor: pointer;" [routerLink]="['/Profile', users.id]">
+                                <h4>{{users.name}}</h4>
+                                <h6 class="mb-0">{{users.about}}</h6>
+                            </div>
+                            <!-- <a href="/Home/UserProfile/?Id=@item.Id">
+                                 <input style="margin-top: 10px; border-radius: 20px" type="submit" value="Takip Et"
+                                 class="btn btn-twitter" />
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

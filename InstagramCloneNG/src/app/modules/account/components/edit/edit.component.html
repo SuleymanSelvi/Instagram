@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="col-12 m-b-30">
+        <div class="card-body">
+            <h3 class="mb-4">Profil Düzenle</h3>
+            <hr>
+            <p>Resim :
+                <input class="form-control" type="file" #image (change)="getFile($event)">
+            </p>
+            <p>Kullanıcı Adı
+                <input type="text" maxlength="30" class="form-control" value="{{isLogin.name}}" #name />
+            </p>
+            <p>Şifre
+                <input type="password" maxlength="12" class="form-control" #password />
+            </p>
+            <p>Email
+                <input type="text" maxlength="25" class="form-control" value="{{isLogin.email}}" #email />
+            </p>
+            <p>Hakkımda
+                <textarea cols="3" rows="3" maxlength="100" class="form-control" #about>{{isLogin.about}}</textarea>
+            </p>
+            <div class="col-12 text-center">
+                <input type="button" value="Kaydet" class="btn btn-google px-5"
+                    (click)="updateProfile(name.value,password.value,email.value,about.value)" />
+            </div>
+            <p style="font-size: 50px;">{{errorMessage}}</p>
+        </div>
+    </div>
+</div>

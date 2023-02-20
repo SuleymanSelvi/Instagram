@@ -1,0 +1,25 @@
+<!-- <h4 *ngIf="postCommets == null">Henüz yorum yok konuşmayı başlat.</h4> -->
+<div *ngFor="let comments of postCommets">
+    <div class='media media-reply'>
+        <img [routerLink]="['/Profile', comments.userId]" style="cursor: pointer;" class='mr-3 circle-rounded'
+            src="{{ comments.userImage}}" width='40' height='40'>
+        <div>
+            <div class='d-sm-flex justify-content-between mb-2'>
+                <h6 class='mb-sm-0'>{{ comments.userName}}<small class='text-muted ml-3'>| {{ comments.createdDate |
+                        date:"dd/MM/yyyy"}}</small></h6>&nbsp;&nbsp;&nbsp;<p>Yanıtla</p>
+            </div>
+            <h5 class="font-tiny" style="margin-top: 10px;">{{ comments.comment}}</h5>
+        </div>
+        <div *ngFor="let subComment of comments.SubComment">
+            <img [routerLink]="['/Profile', subComment.userId]" style="cursor: pointer;" class='mr-3 circle-rounded'
+                src="{{ subComment.userImage}}" width='40' height='40'>
+            <div>
+                <div class='d-sm-flex justify-content-between mb-2'>
+                    <h6 class='mb-sm-0'>{{ subComment.userName}}<small class='text-muted ml-3'>| {{
+                            subComment.createdDate | date:"dd/MM/yyyy"}}</small></h6>
+                </div>
+                <h5 class="font-tiny" style="margin-top: 10px;">{{ subComment.comment}}</h5>
+            </div>
+        </div>
+    </div>
+</div>

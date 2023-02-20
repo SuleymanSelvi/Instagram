@@ -1,0 +1,99 @@
+<div *ngFor="let posts of userPosts">
+    <div class="card">
+        <div class="card-body">
+
+            <div class='media media-reply' style="align-items: center;">
+                <img class="mr-3 circle-rounded" style="border: 1px solid #000000" width="70px" height="70px"
+                    src="{{posts.userImage}}">
+                <div class="d-sm-flex justify-content-between" style="font-size: 15px">
+                    <h4>{{posts.userName}}</h4>
+                </div>
+            </div>
+
+            <!-- Delete Popup -->
+            <div *ngIf="isLogin.id == posts.userId">
+                <button (click)="openPopup()" type="button" class="btn btn-rounded"
+                    style='float:right;margin-top:-80px;color:red'><i class="icon-trash"></i></button>
+                <div class="modal mt-4" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Instagram</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Postu silmek istediğnizden emin misiniz ?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-white" (click)="closePopup()">İptal</button>
+                                <button type="button" class="btn btn-danger" (click)="deletePost(posts.id)">Sil</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="posts.images.endsWith('.jpg')">
+                <a [routerLink]="['/PostDetail', posts.id]">
+                    <img class='click' id='imageZoom' src="{{ posts.images }}"
+                        style='border: 1px solid #000000; margin-left: 20px;' width='95%' height='100%'>
+                </a>
+            </div>
+            <div *ngIf="posts.images.endsWith('.mp4')">
+                <a [routerLink]="['/PostDetail', posts.id]">
+                    <video style="border: 1px solid #000000; margin-left: 20px; max-height: 1000px;" height="auto"
+                        width="1100px" controls>
+                        <source src="{{posts.images}}" type="video/mp4">
+                    </video>
+                </a>
+            </div>
+
+            <div style="margin-left:15px">
+                <div class="card-profile" style="cursor:pointer;display: flex;">
+                    <span (click)="postLike(posts.id,isLogin.id,posts.userId)" class="nav-link px-2 link-secondary">
+                        <i [ngStyle]="posts.existUserLike ? {'color': 'red'} : {'color': 'gray'}" style="color: black;"
+                            class="fa fa-heart"></i></span>
+                    <a [routerLink]="['/PostDetail', posts.id]">
+                        <span class="nav-link px-2 link-secondary">
+                            <i style="color: black;margin-left:5px" class="fa fa-comment-o"></i></span>
+                    </a>
+                    <span (click)="savePost(posts.id)" class="nav-link px-2 link-secondary">
+                        <i [ngStyle]="posts.existSaved ? {'color': 'red'} : {'color': 'gray'}"
+                            style="color: black; margin-left:970px;" class="fa fa-bookmark"></i></span>
+                </div>
+            </div>
+
+            <div style="margin-top:10px; margin-left:25px;">
+                <h5>{{posts.likeCount}} beğenme</h5>
+                <h5 style="font-family: revert; font-size: 20px;color: black;">{{posts.userName}}&nbsp;
+                    <small>{{posts.description}}</small>
+                </h5>
+                <p style="cursor: pointer;" [routerLink]="['/PostDetail', posts.id]">
+                    {{posts.commentCount}} yorumun tümünü gör</p>
+            </div>
+            <div style="margin-left:20px;">
+                <small class='text-muted ml-2'>{{posts.createdDateAgo}} </small>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!-- <button style="margin-top:15px; margin-left:20px"
+                [ngStyle]="posts.existUserLike  ? {'color': 'red'} : {'color': 'black'}" type="button"
+                class="btn btn-rounded"><i class="fa fa-heart"></i></button>
+            <button style="margin-top:15px; margin-left:10px;" type="button" class="btn btn-rounded"><i
+                    class="fa fa-comment"></i></button>
+            <div style="margin-top:10px; margin-left:25px;">
+                <h5>{{posts.likeCount}} beğenme</h5>
+                <p style="font-family: revert; font-size: 20px;color: black;">{{posts.description}}</p>
+                <p style="cursor: pointer;" [routerLink]="['/PostDetail', posts.id]">
+                    {{posts.commentCount}} yorumun tümünü gör</p>
+            </div>
+            <div style='justify-content:center; align-items:center; display:flex; margin-top:10px;'>
+                <img class='mr-3 circle-rounded' style='border: 1px solid #000000' src={{isLogin.image}} width='50'>
+                <textarea cols='3' rows='2' maxlength='50' placeholder='Yorum Ekle...' class='form-control'
+                    #comment></textarea>
+                <input style='margin-left:10px' type='button' value='Yorum Yap' class='btn btn-dribbble' />
+</div> -->

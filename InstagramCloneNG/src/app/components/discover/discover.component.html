@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<div class="col-md-3"></div>
+<div class="col-md-6 container-fluid">
+    <div class="content-body" style="margin-top: 25px;cursor: pointer;">
+        <div class="row">
+            <div class="col-lg-3" *ngFor="let posts of postsList">
+                <div [routerLink]="['/PostDetail', posts.id]">
+
+                    <div *ngIf="posts.images.endsWith('.jpg')">
+                        <img style="padding-bottom: 10px;" width="310px" height="300px" src="{{posts.images}}">
+                    </div>
+
+                    <div *ngIf="posts.images.endsWith('.mp4')">
+                        <video style="border: 1px solid #000000;" width="310px" height="300px" autoplay loop
+                            [muted]="true">
+                            <source src="{{posts.images}}" type="video/mp4">
+                        </video>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-3"></div>

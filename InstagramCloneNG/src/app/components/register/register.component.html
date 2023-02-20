@@ -1,0 +1,35 @@
+<div style="align-items: center; display: flex;">
+    <div style="width:10px;">
+        <img src="https://gunesyilmaz.com/wp-content/uploads/2021/03/1517500962_Cambiare-font-su-Instagram.jpg" width="2550" />
+    </div>
+    <div style="margin-left:100px">
+        <div class="card">
+            <div class="card-body pt-5" style="width:500px">
+                <a class="text-center">
+                    <h3>Kayıt Ol</h3>
+                    <h6 style="color:red">{{registirError}}</h6>
+                </a>
+                <div class="mt-5 mb-5 login-input">
+                    <div class="form-group">
+                        <input type="text" placeholder="👤 Kullanıcı Adı" maxlength="30" #name class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="🗝 Şifre" maxlength="12" #password class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="✉ Email" maxlength="25" #email class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <textarea cols="5" rows="3" placeholder="💬 Hakkınızda..." maxlength="100" #about
+                            class="form-control"></textarea>
+                    </div>
+                    <input type="submit" value="Kayıt Ol"
+                        (click)="clickRegister(name.value,password.value,email.value,about.value)"
+                        class="btn login-form__btn submit w-100" />
+                </div>
+                <p class="mt-5 login-form__footer text-primary">Hesabınız Varmı ? <a href="/">Giriş Yap</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

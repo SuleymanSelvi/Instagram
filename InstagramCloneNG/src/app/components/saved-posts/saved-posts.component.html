@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="col-md-3"></div>
+<div class="col-md-6 container-fluid">
+    <div class="content-body" style="margin-top: 25px;cursor: pointer;">
+        <div class="row">
+            <div class="col-lg-3" *ngFor="let savedPosts of savedPostList">
+                <div [routerLink]="['/PostDetail', savedPosts.id]">
+
+                    <div *ngIf="savedPosts.images.endsWith('.jpg')">
+                        <img style="padding-bottom: 10px;" width="310px" height="300px" src="{{savedPosts.images}}">
+                    </div>
+
+                    <div *ngIf="savedPosts.images.endsWith('.mp4')">
+                        <video style="border: 1px solid #000000;" width="310px" height="300px">
+                            <source src="{{savedPosts.images}}" type="video/mp4">
+                        </video>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-3"></div>

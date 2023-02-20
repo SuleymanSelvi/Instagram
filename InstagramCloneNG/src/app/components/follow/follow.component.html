@@ -1,0 +1,26 @@
+<!-- <input type="button" class="form-control" (click)="searchUser(searchText.value)">
+      <button class='btn btn-outline-primary'><i class='fa fa-search'></i></button> -->
+<div class="card" style="height: auto; overflow: auto;border: 1px solid #e7e7e7;">
+  <div class="card-body">
+    <!-- <div class="form-group">
+      <input style="border-radius: 15px;" type="text" placeholder="Ara..." class="form-control"
+        (keyup)="searchUser(searchText.value)" #searchText>
+    </div> -->
+    <h4 style="text-align:center">Bunlarıda beğenebilirsin</h4>
+    <div *ngFor="let user of userList">
+      <div class="slimScrollDiv">
+        <div class="media border-bottom-1 pt-3 pb-3" [routerLink]="['/Profile', user.id]">
+          <img class="mr-3 rounded-circle" style="border:1px solid #000000;cursor: pointer;" width="55" height="55"
+            src="{{ user.images }}">
+          <div class="media-body" style="cursor: pointer;" [routerLink]="['/Profile', user.id]">
+            <h5>{{ user.name }}</h5>
+            <p class="mb-0">{{user.about}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="media-body" style="font-size:16px;margin-top:15px">
+      <p [routerLink]="['/Users', searchText.value]" style="cursor: pointer;">Tüm Sonuçları Gör</p>
+    </div> -->
+  </div>
+</div>

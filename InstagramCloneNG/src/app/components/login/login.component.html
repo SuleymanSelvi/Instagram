@@ -1,0 +1,32 @@
+<div style="align-items: center; display: flex;">
+    <div style="width:10px;">
+        <img src="../../../assets/images/login.png" width="2550px" />
+    </div>
+    <div style="margin-left:1290px;">
+        <div class="card">
+            <div class="card-body pt-5" style="width:400px;height: 590px;">
+                <a class="text-center">
+                    <img style="margin-left: 60px;" width="200" height="80"
+                        src="https://fontmeme.com/images/instagram-new-logo.png">
+                    <h6 style="color:red">{{loginError}}</h6>
+                </a>
+                <div class="mt-5 login-input">
+                    <div class="form-group">
+                        <input type="text" placeholder="👤 Kullanıcı Adınız" #name value="Beşiktaş JK" maxlength="30"
+                            class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="🗝 Şifreniz" value="123" #password maxlength="12"
+                            class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Giriş Yap" (click)="clickLogin(name.value,password.value)"
+                            class="btn btn-google submit w-100" />
+                    </div>
+                </div>
+                <p class="mt-5 login-form__footer text-primary">Hesabınız Yokmu ? <a href="/Register">
+                        Kayıt Ol</a></p>
+            </div>
+        </div>
+    </div>
+</div>

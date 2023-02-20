@@ -1,0 +1,294 @@
+<!-- <style>
+    .loader {
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        60% {
+            transform: rotate(0deg);
+        }
+
+        60% {
+            transform: rotate(360deg);
+        }
+    }
+</style> -->
+
+<!-- <div class="loader" *ngIf="loader">
+    <img width="50px" height="50px"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png">
+</div> -->
+
+<!-- POSTS -->
+<div class="mt-4" *ngFor="let posts of postsList">
+    <div class="card" style="border: 1px solid #e7e7e7;">
+        <div class="card-body" [ngStyle]="{'filter':blurStyle}">
+
+            <!-- POST HEADER -->
+            <div (click)="selectedPost(posts.id)">
+                <div class='media media-reply' style="align-items: center; cursor: pointer;">
+                    <img class="mr-3 circle-rounded" style="border: 1px solid #000000" width="70px" height="70px"
+                        src="{{posts.userImage}}">
+                    <div class="d-sm-flex justify-content-between mb-2" style="font-size: 15px">
+                        <h4>{{posts.userName}}</h4>
+                    </div>
+                </div>
+
+                <!-- IF IMAGE -->
+                <div *ngIf="posts.images.endsWith('.jpg')">
+                    <!-- <a [routerLink]="['/PostDetail', posts.id]"> -->
+                    <img (dblclick)="postLike(posts.id,isLogin.id,posts.userId)" class='click' id='imageZoom'
+                        src="{{ posts.images }}" style='border: 1px solid #000000; margin-left: 20px; cursor: pointer;'
+                        width='95%' height='100%'>
+                    <!-- </a> -->
+                </div>
+            </div>
+
+            <!-- IF VIDEO -->
+            <div *ngIf="posts.images.endsWith('.mp4')">
+                <video style="border: 1px solid #000000; margin-left: 20px; max-height: 1000px;" height="auto"
+                    width="730" controls>
+                    <source src="{{posts.images}}" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- LIKE - COMMENT - DM - SAVE ICON -->
+            <div style="margin-left:15px">
+                <div class="card-profile" style="cursor:pointer;display: flex;">
+                    <span (click)="postLike(posts.id,isLogin.id,posts.userId)" class="nav-link px-2 link-secondary">
+                        <i [ngStyle]="posts.existUserLike ? {'color': 'red'} : {'color': 'gray'}" style="color: black;"
+                            class="fa fa-heart"></i></span>
+                    <span (click)="commentDivShowHide()" class="nav-link px-2 link-secondary">
+                        <i style="color: black;margin-left:5px" class="fa fa-comment-o"></i></span>
+                    <span (click)="openPostDmPopup(posts)" class="nav-link px-2 link-secondary">
+                        <i style="color: black;" class="fa fa-paper-plane-o"></i></span>
+
+                    <!--  DM POST MESSAGE SEND  -->
+                    <div class="modal" role="dialog" style="padding-top: 100px;"
+                        [ngStyle]="{'display' : displayStylex}">
+                        <div class="row">
+                            <div class="col-md-5"></div>
+                            <div class="col-md-2">
+                                <div class="card" style="display: flex;">
+                                    <div class="col-12">
+                                        <span (click)="closePostDmPopup()">
+                                            <i style="color: black; font-size: 20px; float: right;"
+                                                class="fa fa-close"></i></span>
+
+                                        <!-- SEARCH USER -->
+                                        <div class="px-4 d-none d-md-block">
+                                            <input (keyup)="searchUser(search.value)" style="border-radius: 20px;"
+                                                type="search" class="form-control my-3" placeholder="Ara..." #search>
+                                        </div>
+                                        <hr>
+                                        <!-- USER LIST -->
+                                        <div *ngFor="let user of userList">
+                                            <a class="list-group-item list-group-item-action border-0">
+                                                <div class="float-right" style="color: black;">
+                                                    <input class="btn btn-google px-5" type="button" value="Gönder"
+                                                        (click)="sendPostDM(user.id)">
+                                                </div>
+                                                <div class="d-flex align-items-start" style="cursor: pointer;">
+                                                    <img src="{{user.images}}" class="rounded-circle mr-1"
+                                                        style="border:1px solid #000000;cursor: pointer;" width="45"
+                                                        height="45">
+                                                    <div class="flex-grow-1 ml-3">{{user.name}}</div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
+                    </div>
+
+                    <span (click)="savePost(posts.id)" class="nav-link px-2 link-secondary">
+                        <i [ngStyle]="posts.existSaved ? {'color': 'red'} : {'color': 'gray'}"
+                            style="color: black;margin-left:560px;" class="fa fa-bookmark"></i></span>
+                </div>
+            </div>
+
+            <!-- LIKE - COMMENT COUNT -->
+            <div style="margin-top:10px; margin-left:25px;">
+                <h5>{{posts.likeCount}} beğenme</h5>
+                <h5 style="font-family: revert; font-size: 20px;color: black;">{{posts.userName}}&nbsp;
+                    <small>{{posts.description}}</small>
+                </h5>
+                <p style="cursor: pointer;" [routerLink]="['/PostDetail', posts.id]">
+                    {{posts.commentCount}} yorumun tümünü gör</p>
+            </div>
+            <div style="margin-left:20px;">
+                <small class='text-muted ml-2'>{{posts.createdDateAgo}} </small>
+            </div>
+
+            <!-- QUICK COMMENT -->
+            <div style='justify-content:center; align-items:center; display:flex; margin-top:10px;' *ngIf="commentDiv">
+                <img class='mr-3 circle-rounded' style='border: 1px solid #000000' src={{isLogin.image}} width='50'>
+                <textarea cols='3' rows='2' maxlength='50' placeholder='Yorum Ekle...' class='form-control'
+                    #comment></textarea>
+                <input style='margin-left:10px' type='button' value='Yorum Yap' class='btn btn-google'
+                    (click)="uploadComment(posts.id,isLogin.id,comment.value,posts.id)" />
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- POPUP DETAIL -->
+<div class="modal" id="modalx" role="dialog" style="padding-top: 70px;" [ngStyle]="{'display':displayStyle}"
+    *ngIf="postDetail != null">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="card" style="display: -webkit-box; width:70%;height: 70%;">
+
+            <!-- POST -->
+            <div class="col-md-8 container-fluid">
+                <div class="card" style='margin-top: 25px'>
+                    <div class="card-body">
+                        <div class='media media-reply' style="align-items: center;">
+                            <img [routerLink]="['/Profile', postDetail.userId]" class="mr-3 circle-rounded"
+                                style="border: 1px solid #000000;cursor: pointer;" width="70px" height="70px"
+                                src="{{postDetail.userImage}}">
+                            <div class="d-sm-flex justify-content-between mb-2" style="font-size: 15px">
+                                <h4 [routerLink]="['/Profile', postDetail.userId]" style="cursor: pointer">
+                                    {{postDetail.userName}}</h4>
+                                <small class='text-muted ml-2'> | &thinsp; {{postDetail.createdDateAgo}}
+                                </small>
+                            </div>
+                        </div>
+
+                        <div *ngIf="postDetail.images.endsWith('.jpg')">
+                            <img [routerLink]="['/PostDetail', postDetail.id]" src="{{postDetail.images}}"
+                                style="border: 1px solid #000000; margin-left:20px; cursor: pointer; max-height: 800px;"
+                                width="100%" height="100%">
+                        </div>
+
+                        <div *ngIf="postDetail.images.endsWith('.mp4')">
+                            <video style="border: 1px solid #000000; margin-left: 20px; max-height: 800px;"
+                                height="auto" width="100%" controls autoplay id="video">
+                                <source src="{{postDetail.images}}" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <button style="margin-top:15px; margin-left:20px"
+                            [ngStyle]="postDetail.existUserLike  ? {'color': 'red'} : {'color': 'black'}"
+                            (click)="postLike(postDetail.id,isLogin.id,postDetail.userId)" type="button"
+                            class="btn btn-rounded"><i class="fa fa-heart"></i></button>
+                        <button style="margin-top:15px; margin-left:10px;" type="button" class="btn btn-rounded"><i
+                                class="fa fa-comment"></i></button>
+                        <button style="margin-top:15px; margin-right:30px; float:right;" type="button"
+                            class="btn btn-rounded"
+                            [ngStyle]="postDetail.existSaved ? {'color': 'red'} : {'color': 'gray'}"
+                            (click)="savePost(postDetail.id)">
+                            <i class="fa fa-bookmark"></i></button>
+                        <div style="margin-top:10px; margin-left:25px;">
+                            <h5>{{postDetail.likeCount}} beğenme</h5>
+                            <p style="font-family: revert; font-size: 19px;color: black;">{{postDetail.description}}
+                            </p>
+                            <p>{{postDetail.commentCount}} yorum</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POST COMMENTS -->
+            <div class="col-md-4 container-fluid">
+
+                <div class="card" style='margin-top: 25px'>
+                    <div class="card-body" *ngIf="isLogin != null">
+                        <div class="d-flex">
+                            <img [routerLink]="['/Profile', isLogin.id]" class="mr-3 circle-rounded"
+                                style="border:1px solid #000000" src="{{isLogin.image}}" width="70" height="70">
+                            <textarea cols="3" rows="3" maxlength="50" placeholder="Yorum ekle..." #comment
+                                class="form-control"></textarea>
+                            <input type="hidden" value="0" #commentIdValue>
+                            <input style="margin-left:10px;" type="submit" value="Yorum Yap" class="btn btn-dribbble"
+                                (click)="uploadComment(postDetail.id,isLogin.id,comment.value,commentIdValue.value)"
+                                (click)="comment.value = ''" />
+                        </div>
+                        <div style="margin-top: 50px;height: 700px; overflow: auto;">
+                            <div *ngFor="let comments of postDetailComments">
+                                <div class='media media-reply'>
+                                    <img [routerLink]="['/Profile', comments.userId]"
+                                        style="cursor: pointer;border: 1px solid #000000" class='mr-3 circle-rounded'
+                                        src="{{comments.userImage}}" width='50' height="50">
+                                    <div>
+                                        <div class='d-sm-flex'>
+                                            <h6>{{ comments.userName}}<small class='text-muted ml-2'>
+                                                    {{comments.createdDateAgo}}</small></h6>
+                                            <p class='text-muted ml-3' style="cursor: pointer;"
+                                                (click)="comment.placeholder= '@' + comments.userName + ' ' +  'kullanıcısına yanıt olarak' "
+                                                (click)="commentIdValue.value=comments.id">
+                                                Yanıtla</p>
+                                            <p *ngIf="isLogin.id == comments.userId"
+                                                (click)="deletePostComment(comments.postId,comments.id)" class="ml-2"
+                                                style='color:red;cursor: pointer;'>
+                                                <i class="icon-trash"></i>
+                                            </p>
+                                        </div>
+                                        <h4>{{comments.comment}}</h4>
+                                    </div>
+                                </div>
+
+                                <div style="margin-left: 60px;" *ngFor="let subComment of comments.subComment">
+                                    <div class='media media-reply'>
+                                        <img [routerLink]="['/Profile', subComment.userId]" style="cursor: pointer;"
+                                            class='mr-3 circle-rounded' src="{{subComment.userImage}}" width='40'
+                                            height='40'>
+                                        <div>
+                                            <div class='d-sm-flex justify-content-between mb-2'>
+                                                <h6 class='mb-sm-0'>{{ subComment.userName}}<small
+                                                        class='text-muted ml-2'>
+                                                        {{subComment.createdDateAgo}}</small></h6>
+                                                <p *ngIf="isLogin.id == subComment.userId"
+                                                    (click)="deletePostComment(comments.postId,subComment.id)"
+                                                    class="ml-2" style='color:red;cursor: pointer;'>
+                                                    <i class="icon-trash"></i>
+                                                </p>
+                                            </div>
+                                            <h4>@<small>{{comments.userName}}</small> {{subComment.comment}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <span (click)="closePopup()"><i style="color: black;cursor: pointer;" class="fa fa-times"></i></span>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<!-- TAKİP EDİLEN YOKSA -->
+<div style="margin-top: 25px;" *ngIf="postsList == false">
+    <div class="card">
+        <div class="card-body">
+            <div style="text-align: center; margin-top: 50px;">
+                <a routerLink="/Discover">
+                    <img
+                        src="https://static.vecteezy.com/system/resources/thumbnails/005/605/292/small/beautiful-girls-taking-selfies-in-the-app-of-a-mobile-phone-to-make-friends-press-heart-shape-illustration-flat-style-cartoon-free-vector.jpg" />
+                    <p style="font-size: 30px; color:black; padding-top: 30px;">Haydi, yeni insanlar keşfedelim!</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <button style="margin-top:15px; margin-left:20px"
+                [ngStyle]="posts.existUserLike ? {'color': 'red'} : {'color': 'black'}"
+                (click)="postLike(posts.id,isLogin.id,posts.userId)" type="button" class="btn btn-rounded">
+                <i class="fa fa-heart"></i></button>
+
+            <button style="margin-top:15px; margin-left:10px;" type="button" class="btn btn-rounded"
+                (click)="commentDivShowHide()"><i class="fa fa-comment"></i></button>
+
+            <button style="margin-top:15px; margin-right:15px; float:right;" type="button" class="btn btn-rounded"
+                [ngStyle]="posts.existSaved ? {'color': 'red'} : {'color': 'gray'}" (click)="savePost(posts.id)">
+                <i class="fa fa-bookmark"></i></button> -->

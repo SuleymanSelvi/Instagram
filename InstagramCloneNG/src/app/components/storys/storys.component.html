@@ -1,0 +1,147 @@
+<style>
+    /* HİKAYE EKLEME İCONU */
+    span.icon {
+        position: absolute;
+        right: 0;
+        background: #4385ff;
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        vertical-align: middle;
+        color: white;
+        cursor: pointer;
+        border: 1px solid white;
+    }
+
+    /* TİMEOUT */
+    .progress {
+        border-radius: 50px;
+        margin: 20px auto;
+        width: 100%;
+        height: 3px;
+        background-color: #ddd;
+        margin-right: 10px;
+    }
+
+    .bar {
+        border-radius: 50px;
+        background-color: #838383;
+        width: 0px;
+        height: 3px;
+        position: absolute;
+    }
+</style>
+
+<!-- STORY TEMPLATE -->
+<div class="card mt-4" style="border: 1px solid #e7e7e7;" id="openStory">
+    <div class="card-body">
+        <div style="display: flex;overflow-x: auto;">
+            <div class="media mr-1" style="display: inline;text-align: center;position: relative;">
+                <img src="{{isLogin.image}}" width="80" height="80" class="mr-2 rounded-circle" />
+                <span id="uploadStoryDiv" class="icon"><i class="fa fa-plus"></i></span>
+                <h6 class="mt-3">{{isLogin.name.substring(0,10) + ".."}}</h6>
+            </div>
+
+            <div style="display: flex;" *ngFor="let storys of storysList">
+                <div (click)="selectedStory(storys.userId)" class="media mr-1"
+                    style="display: inline;text-align: center;">
+                    <img class="mr-3 rounded-circle"
+                        [ngStyle]="storys.storyList[0].isSeen ? {'border': '2px solid #b3b3b3'} : {'border': '2px solid #ff0000'}"
+                        style="cursor: pointer; padding: 3px;" width="80" height="80"
+                        src="{{storys.storyList[0].userImage}}">
+                    <h6 class="mt-3">{{storys.storyList[0].userName.substring(0,10) + ".."}}</h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- STORY -->
+<div class="modal mt-5" id="storyPopup" *ngIf="storyDetail != null" [ngStyle]="{'display':displayStyle}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-xl-9 mx-auto">
+                <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+                    <div class="card-body p-4">
+                        <div class="d-none d-md-flex" style="padding-bottom: 30px;">
+
+                            <div *ngIf="storyDetail.images.endsWith('.jpg')">
+                                <img style="border: 1px solid black; max-height: 1100px;" width="760px" height="100%"
+                                    src="{{storyDetail.images}}">
+                            </div>
+
+                            <div *ngIf="storyDetail.images.endsWith('.mp4')">
+                                <video style="border: 1px solid black; max-height: 1100px;" width="760" height="100%"
+                                    autoplay id="video">
+                                    <source src="{{storyDetail.images}}" type="video/mp4">
+                                </video>
+                            </div>
+
+                            <div style="position: absolute; width: 90%;">
+                                <div style="display: inline-flex;  width: 100%; margin-left: 10px;">
+                                    <div class="progress" *ngFor="let storys of selectedUserStorys.storyList">
+                                        <div class="bar" id="story{{storys.id}}"></div>
+                                    </div>
+                                </div>
+
+                                <div style="padding:15px; display: flex; align-items: center; margin-top: -20px;">
+                                    <img [routerLink]="['/Profile', storyDetail.userId]" class="rounded-circle mr-3"
+                                        style="cursor: pointer;" width="40px" height="40px"
+                                        src="{{storyDetail.userImage}}">
+                                    <h4 [routerLink]="['/Profile', storyDetail.userId]" class="mr-3"
+                                        style="color: white; cursor: pointer;">{{storyDetail.userName}}</h4>
+                                    <h6 style="color: white;">{{storyDetail.createdDateAgo}}</h6>
+                                </div>
+                                <span *ngIf="isLogin.id == storyDetail.userId" (click)="deleteStory(storyDetail.id)">
+                                    <i style="color: rgb(255, 63, 63);cursor: pointer; margin-left: 25px; font-size: 18px;"
+                                        class="fa fa-trash"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <span (click)="closePopup()" id="closeStory" style="margin-right: 5px;">
+                        <i style="color: black;cursor: pointer;" class="fa fa-times"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- UPLOAD STORY -->
+<div class="modal" tabindex="-1" role="dialog" id="uploadStoryShow">
+    <div class="container" style="padding-top: 50px;">
+        <div class="row">
+            <div class="col-lg-10 col-xl-9 mx-auto">
+                <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+                    <div class="card-body p-4 p-sm-5">
+                        <h5 class="card-title text-center mb-4 fw-light fs-5">Yeni hikaye oluştur</h5>
+                        <div class="d-none d-md-flex" style="padding-bottom: 30px;">
+
+                            <img *ngIf="fileType == 'image/jpeg'" style="border: 2px solid black; max-height: 850px;"
+                                width="100%" height="100%" id="storyImage"
+                                src="https://img.freepik.com/premium-vector/man-taking-selfie-photo-smartphone_176411-928.jpg?w=2000"
+                                [attr.src]="imageUrl">
+
+                            <video *ngIf="fileType == 'video/mp4'" #video style="max-height: 850px;" width="100%"
+                                height="100%" controls autoplay (loadedmetadata)="getDuration($event)"
+                                [attr.src]="videoUrl">
+                            </video>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <label for="floatingInputUsername">Hikaye</label>
+                            <input class="form-control" type="file" #image (change)="getFile($event)">
+                        </div>
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-google" style="width: 100%;" type="submit"
+                                [disabled]="image.value == ''" (click)="uploadStory()">Paylaş</button>
+                        </div>
+                    </div>
+                    <span id="uploadStoryHide" style="margin-right: 5px;">
+                        <i style="color: black;cursor: pointer;" class="fa fa-times"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
