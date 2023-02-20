@@ -1,0 +1,178 @@
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\appsettings.Development.json
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\appsettings.json
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\InstagramApi.exe
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\InstagramApi.deps.json
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\InstagramApi.runtimeconfig.json
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\InstagramApi.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\ref\InstagramApi.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\InstagramApi.pdb
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.csproj.AssemblyReference.cache
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.AssemblyInfoInputs.cache
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.AssemblyInfo.cs
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.csproj.CoreCompileInputs.cache
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\staticwebassets.build.json
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\staticwebassets.development.json
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\scopedcss\bundle\InstagramApi.styles.css
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.csproj.CopyComplete
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\ref\InstagramApi.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.pdb
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.genruntimeconfig.cache
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Instagram.Domain.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Instagram.Infrastructure.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Instagram.Infrastructure.pdb
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Instagram.Domain.pdb
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\EntityFramework.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\System.CodeDom.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Humanizer.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.Practices.ServiceLocation.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\XAct.Core.PCL.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\StackExchange.Redis.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Grpc.Core.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\Grpc.Core.Api.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\linux-arm64\native\libgrpc_csharp_ext.arm64.so
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\linux-x64\native\libgrpc_csharp_ext.x64.so
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\osx-x64\native\libgrpc_csharp_ext.x64.dylib
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-x64\native\grpc_csharp_ext.x64.dll
+D:\Onur (Okul)\MVC\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-x86\native\grpc_csharp_ext.x86.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\appsettings.Development.json
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\appsettings.json
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\InstagramApi.exe
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\InstagramApi.deps.json
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\InstagramApi.runtimeconfig.json
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\InstagramApi.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\ref\InstagramApi.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\InstagramApi.pdb
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.Practices.ServiceLocation.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\EntityFramework.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Grpc.Core.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Grpc.Core.Api.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Humanizer.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\StackExchange.Redis.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\System.CodeDom.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\XAct.Core.PCL.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\linux-arm64\native\libgrpc_csharp_ext.arm64.so
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\linux-x64\native\libgrpc_csharp_ext.x64.so
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\osx-x64\native\libgrpc_csharp_ext.x64.dylib
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-x64\native\grpc_csharp_ext.x64.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-x86\native\grpc_csharp_ext.x86.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Instagram.Domain.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Instagram.Infrastructure.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Instagram.Infrastructure.pdb
+D:\Onur\MVC - API\InstagramClone\InstagramApi\bin\Debug\net6.0\Instagram.Domain.pdb
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.csproj.AssemblyReference.cache
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.AssemblyInfoInputs.cache
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.AssemblyInfo.cs
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.csproj.CoreCompileInputs.cache
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\staticwebassets.build.json
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\staticwebassets.development.json
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\scopedcss\bundle\InstagramApi.styles.css
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.csproj.CopyComplete
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\ref\InstagramApi.dll
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.pdb
+D:\Onur\MVC - API\InstagramClone\InstagramApi\obj\Debug\net6.0\InstagramApi.genruntimeconfig.cache

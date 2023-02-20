@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "048c1fba-6abd-40fa-87b2-f099b3b311a5": {
+      "ProjectGuid": "048c1fba-6abd-40fa-87b2-f099b3b311a5",
+      "DisplayName": "Instagram.Infrastructure",
+      "ColorIndex": 0
+    },
+    "7465dcff-1d53-4ef7-94cb-c977bf2ee49f": {
+      "ProjectGuid": "7465dcff-1d53-4ef7-94cb-c977bf2ee49f",
+      "DisplayName": "InstagramApi",
+      "ColorIndex": 1
+    },
+    "fbbf9457-ee10-4209-98f2-468510a86306": {
+      "ProjectGuid": "fbbf9457-ee10-4209-98f2-468510a86306",
+      "DisplayName": "Instagram.Domain",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "919fd655-f067-4ba2-b932-d926e85dd6b4": {
+      "ProjectGuid": "919fd655-f067-4ba2-b932-d926e85dd6b4",
+      "DisplayName": "Script Documents",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
