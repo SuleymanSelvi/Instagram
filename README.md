@@ -1,12 +1,12 @@
-Projede kullanılan yazılım dilleri ve teknolojiler;
-C#
-HTML
-CSS
-ANGULARJS
-TYPESCRIPT
-JQUERY
-NODE.JS
-SOCKET.IO
+# Projede kullanılan yazılım dilleri ve teknolojiler;
+* C#
+* HTML
+* CSS
+* ANGULARJS
+* TYPESCRIPT
+* JQUERY
+* NODE.JS
+* SOCKET.IO
 
 # Projeden görüntüler;
 
