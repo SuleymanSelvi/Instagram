@@ -5,10 +5,10 @@
 * .Net Core Web API
 * HTML
 * CSS
-* ANGULARJS
-* TYPESCRIPT
-* JQUERY
-* NODE.JS
+* AngularJS
+* TypeScript
+* jQuery
+* Node.JS
 * SOCKET.IO
 
 <br>
