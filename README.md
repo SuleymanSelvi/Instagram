@@ -2,7 +2,7 @@
 ---
 
 * C#
-* .Net Core Web API
+* ASP.Net Core Web API
 * HTML
 * CSS
 * AngularJS
